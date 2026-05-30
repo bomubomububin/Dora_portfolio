@@ -3,10 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dora's Portfolio</title>
+    <title>Portfolio | Prospective Grad Student</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to Dora's Portfolio!</h1>
-    <p>Currently under construction.</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Portfolio.</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hello, I'm <span class="highlight">Dora</span></h1>
+            <h2 class="hero-subtitle">Prospective M.S. Candidate in Computer Science</h2>
+            <p class="hero-description">
+                Bridging intelligent computing with real-world sensing systems. 
+                Passionate about data structures, algorithms, and building efficient solutions.
+            </p>
+            
+            <div class="skill-tags">
+                <span class="tag"><i class="devicon-python-plain"></i> Python</span>
+                <span class="tag"><i class="devicon-c-plain"></i> C</span>
+                <span class="tag"><i class="devicon-java-plain"></i> Java</span>
+                <span class="tag"><i class="devicon-matlab-plain"></i> MATLAB</span>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="projects.html" class="btn btn-primary">View Projects</a>
+                <a href="https://github.com/bomubomububin" target="_blank" class="btn btn-secondary">GitHub Profile</a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
