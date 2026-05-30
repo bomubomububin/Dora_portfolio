@@ -1,13 +1,19 @@
 /* --- アカデミック・ミニマル設定 --- */
 :root {
-    --text-main: #1a1a1a;        /* 漆黒に近い墨色（論文のインク色） */
-    --text-muted: #555555;       /* やや薄いグレー */
-    --accent-color: #0f172a;     /* 深いネイビー */
-    --bg-color: #ffffff;         /* 完全な白 */
+    --text-main: #1a1a1a;
+    /* 漆黒に近い墨色（論文のインク色） */
+    --text-muted: #555555;
+    /* やや薄いグレー */
+    --accent-color: #0f172a;
+    /* 深いネイビー */
+    --bg-color: #ffffff;
+    /* 完全な白 */
     --border-color: #eaeaea;
-    
-    --font-heading: 'Lora', serif;      /* 見出し用セリフ体 */
-    --font-body: 'Inter', sans-serif;   /* 本文用サンセリフ体 */
+
+    --font-heading: 'Lora', serif;
+    /* 見出し用セリフ体 */
+    --font-body: 'Inter', sans-serif;
+    /* 本文用サンセリフ体 */
 }
 
 * {
@@ -21,7 +27,8 @@ body {
     color: var(--text-main);
     background-color: var(--bg-color);
     line-height: 1.8;
-    -webkit-font-smoothing: antialiased; /* 文字を美しくレンダリング */
+    -webkit-font-smoothing: antialiased;
+    /* 文字を美しくレンダリング */
 }
 
 a {
@@ -64,7 +71,8 @@ a {
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--text-main);
     border-bottom: 1px solid var(--text-main);
     padding-bottom: 2px;
@@ -169,13 +177,15 @@ a {
 .btn-outline:hover {
     border-color: var(--accent-color);
 }
+
 /* --- 下層ページ共通・テキストレイアウト --- */
 .page-content {
     padding: 4rem 2rem;
 }
 
 .text-container {
-    max-width: 700px; /* 論文のように読みやすい文字幅に制限 */
+    max-width: 700px;
+    /* 論文のように読みやすい文字幅に制限 */
     margin: 0 auto;
 }
 
@@ -240,8 +250,86 @@ a {
         flex-direction: row;
         gap: 2rem;
     }
+
     .news-date {
         min-width: 120px;
         margin-bottom: 0;
     }
+}
+
+/* --- Research & Publications --- */
+
+/* 論文実績のブロック */
+.publication-item {
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--accent-color);
+    /* 論文引用風の左線 */
+    margin-bottom: 2rem;
+}
+
+.pub-title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.pub-meta p {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    margin-bottom: 0.2rem;
+}
+
+.pub-abstract {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.pub-keywords {
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* 研究プロジェクトのブロック */
+.research-item {
+    margin-bottom: 3rem;
+}
+
+.research-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.research-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--accent-color);
+}
+
+.research-date {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-family: monospace;
+    /* 日付部分を少しテクニカルな印象に */
+}
+
+.research-body p {
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+}
+
+.research-areas {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    background-color: #f8f9fa;
+    /* 薄いグレーの背景で区切る */
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
 }
