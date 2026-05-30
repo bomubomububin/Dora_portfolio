@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeYan Dong | AI Researcher</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-container">
@@ -24,34 +28,70 @@
     </nav>
 
     <main class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <p class="role-tag">Student Engineer & AI Researcher</p>
+        <div class="container hero-split-layout">
+
+            <div class="hero-image-col">
+                <img src="https://via.placeholder.com/400x500/1e3a8a/ffffff?text=Professional+ID+Photo+(Blue+BG)"
+                    alt="LeYan Dong Professional Photo" class="profile-photo">
+            </div>
+
+            <div class="hero-text-col">
                 <h1 class="name">LeYan Dong</h1>
-                
-                <h2 class="mission-statement">
-                    Building Intelligent Systems for Real-World Challenges.
+                <p class="role-tag">Student Engineer & AI Researcher</p>
+
+                <h2 class="mission-statement" style="font-size: 1.4rem; margin-top: 1rem; margin-bottom: 2.5rem;">
+                    Interested in Robotics,<br>
+                    Computer Engineering,<br>
+                    and Intelligent Systems.
                 </h2>
-                
-                <div class="bio-text">
-                    <p>
-                        I am a high school student passionate about artificial intelligence, robotics, and computer engineering. My work focuses on applying intelligent algorithms and data-driven approaches to solve real-world engineering problems.
-                    </p>
+
+                <div class="hero-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-label">Current Research:</span>
+                        <span class="highlight-value">AI-Based UAV Route Optimization</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-label">Conference Publication:</span>
+                        <span class="highlight-value">CONF-CDS 2026</span>
+                    </div>
                 </div>
 
-                <div class="skill-tags">
-                    <span class="tech-tag"><i class="devicon-python-plain"></i> Python</span>
-                    <span class="tech-tag"><i class="devicon-tensorflow-original"></i> Machine Learning</span>
-                    <span class="tech-tag"><i class="devicon-opencv-plain"></i> Computer Vision</span>
-                    <span class="tech-tag"><i class="devicon-arduino-plain"></i> Robotics</span>
-                </div>
-
-                <div class="action-links">
+                <div class="action-links" style="margin-top: 2.5rem;">
                     <a href="projects.html" class="btn btn-solid">View Projects</a>
-                    <a href="https://github.com/bomubomububin" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://github.com/bomubomububin" target="_blank" class="btn btn-outline"><i
+                            class="fa-brands fa-github"></i> GitHub</a>
                 </div>
             </div>
+
         </div>
     </main>
+    <section class="news-section" style="padding: 4rem 2rem; background-color: var(--bg-color);">
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
+            <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 2rem; text-align: center;">News</h2>
+            
+            <div class="timeline" style="border-left: 2px solid var(--accent-color); padding-left: 20px; margin-left: 20px;">
+                
+                <div class="timeline-item" style="margin-bottom: 2rem; position: relative;">
+                    <span style="position: absolute; left: -26px; top: 0; width: 10px; height: 10px; border-radius: 50%; background-color: var(--bg-color); border: 2px solid var(--accent-color);"></span>
+                    <h3 style="font-size: 1rem; color: var(--text-muted); font-family: monospace;">May 2026</h3>
+                    <p style="font-size: 1.1rem; color: var(--text-main); margin-top: 0.5rem; font-weight: 500;">Paper accepted by CONF-CDS 2026.</p>
+                </div>
+
+                <div class="timeline-item" style="margin-bottom: 2rem; position: relative;">
+                    <span style="position: absolute; left: -26px; top: 0; width: 10px; height: 10px; border-radius: 50%; background-color: var(--bg-color); border: 2px solid var(--accent-color);"></span>
+                    <h3 style="font-size: 1rem; color: var(--text-muted); font-family: monospace;">Apr 2026</h3>
+                    <p style="font-size: 1.1rem; color: var(--text-main); margin-top: 0.5rem; font-weight: 500;">Started AI-Based UAV Optimization Research Project.</p>
+                </div>
+
+                <div class="timeline-item" style="position: relative;">
+                    <span style="position: absolute; left: -26px; top: 0; width: 10px; height: 10px; border-radius: 50%; background-color: var(--bg-color); border: 2px solid var(--accent-color);"></span>
+                    <h3 style="font-size: 1rem; color: var(--text-muted); font-family: monospace;">Jan 2026</h3>
+                    <p style="font-size: 1.1rem; color: var(--text-main); margin-top: 0.5rem; font-weight: 500;">Received recommendation from university professor.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
