@@ -422,3 +422,65 @@ a {
     color: var(--text-muted);
     border-color: var(--text-muted);
 }
+
+/* --- Contact Page --- */
+.contact-page {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.contact-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-message {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 3.5rem;
+    line-height: 1.8;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.contact-label {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.contact-value {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.contact-item:hover .contact-value {
+    color: var(--accent-color);
+}
