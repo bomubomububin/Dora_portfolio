@@ -25,10 +25,11 @@
 body {
     font-family: var(--font-body);
     color: var(--text-main);
-    background-color: var(--bg-color);
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    min-height: 100vh;
+    background-attachment: fixed;
     line-height: 1.8;
     -webkit-font-smoothing: antialiased;
-    /* 文字を美しくレンダリング */
 }
 
 a {
@@ -84,8 +85,6 @@ a {
     min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
-    /* 白に近いグレーブルーから、淡いスレートブルーへのグラデーション */
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
 .skill-tags {
@@ -208,6 +207,15 @@ a {
 /* --- 下層ページ共通・テキストレイアウト --- */
 .page-content {
     padding: 4rem 2rem;
+}
+
+/* 各ページのコンテンツエリアの背景を白くして、角を少し丸くする（任意） */
+.page-content .container {
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    /* 軽い影をつける */
 }
 
 .text-container {
@@ -378,8 +386,10 @@ a {
 /* カード本体とホバー効果 */
 .project-card {
     border: 1px solid var(--border-color);
-    border-radius: 8px; /* 角をほんの少し丸くする */
-    overflow: hidden; /* 画像が角丸をはみ出さないようにする */
+    border-radius: 8px;
+    /* 角をほんの少し丸くする */
+    overflow: hidden;
+    /* 画像が角丸をはみ出さないようにする */
     background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
@@ -388,15 +398,18 @@ a {
 }
 
 .project-card:hover {
-    transform: translateY(-6px); /* ふわっと6px上に浮く */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08); /* 柔らかい影が落ちる */
+    transform: translateY(-6px);
+    /* ふわっと6px上に浮く */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    /* 柔らかい影が落ちる */
     border-color: transparent;
 }
 
 /* 画像エリア */
 .project-image {
     width: 100%;
-    height: 220px; /* 画像の高さを統一 */
+    height: 220px;
+    /* 画像の高さを統一 */
     background-color: #f1f5f9;
     border-bottom: 1px solid var(--border-color);
 }
@@ -404,7 +417,8 @@ a {
 .project-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 画像の縦横比を保ったまま枠を埋める */
+    object-fit: cover;
+    /* 画像の縦横比を保ったまま枠を埋める */
 }
 
 /* カード内のテキストエリア */
@@ -449,7 +463,8 @@ a {
 .project-features {
     margin-bottom: 1.5rem;
     font-size: 0.9rem;
-    flex-grow: 1; /* ボタンを常に一番下に押しやる */
+    flex-grow: 1;
+    /* ボタンを常に一番下に押しやる */
 }
 
 .project-features strong {
@@ -483,7 +498,8 @@ a {
     border-bottom: 1px solid var(--accent-color);
     padding-bottom: 2px;
     transition: color 0.3s ease, border-color 0.3s ease;
-    align-self: flex-start; /* 左寄せ */
+    align-self: flex-start;
+    /* 左寄せ */
 }
 
 .btn-text:hover {
@@ -552,6 +568,7 @@ a {
 .contact-item:hover .contact-value {
     color: var(--accent-color);
 }
+
 /* --- About ページ用レイアウト拡張 --- */
 
 /* 基本情報のグリッド */
@@ -599,6 +616,7 @@ a {
     font-size: 0.95rem;
     font-weight: 500;
 }
+
 /* --- ヒーローセクション（2カラムレイアウト） --- */
 .hero {
     padding: 6rem 2rem;
@@ -629,15 +647,19 @@ a {
 /* 左側：写真 */
 .hero-image-col {
     flex: 0 0 auto;
-    width: 280px; /* 写真の幅 */
+    width: 280px;
+    /* 写真の幅 */
 }
 
 .profile-photo {
     width: 100%;
     height: auto;
-    border-radius: 8px; /* 角を少しだけ丸くして上品に */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* 軽い影で浮かせる */
-    border: 4px solid #ffffff; /* 白いフチをつけて写真館のような仕上がりに */
+    border-radius: 8px;
+    /* 角を少しだけ丸くして上品に */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    /* 軽い影で浮かせる */
+    border: 4px solid #ffffff;
+    /* 白いフチをつけて写真館のような仕上がりに */
 }
 
 /* 右側：テキスト */
@@ -673,4 +695,164 @@ a {
     font-size: 1.15rem;
     color: var(--accent-color);
     font-weight: 500;
+}
+
+/* --- About Page 拡張レイアウト（基本情報・スキル） --- */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    background-color: #f8fafc;
+    padding: 1.5rem;
+    border-left: 2px solid var(--accent-color);
+}
+
+.info-item {
+    font-size: 1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.skill-icon-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.skill-icon-item:hover {
+    border-color: var(--text-main);
+    transform: translateY(-2px);
+}
+
+.skill-icon-item i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.skill-icon-item span {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* --- Projects Page (Card Layout) --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+/* PC画面では2列表示 */
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.project-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ふわっと浮き上がるホバー効果 */
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    border-color: transparent;
+}
+
+.project-image {
+    width: 100%;
+    height: 220px;
+    background-color: #f1f5f9;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    margin-bottom: 0.8rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.project-desc {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+}
+
+.project-features {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+.project-features strong {
+    color: var(--text-main);
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.project-features ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.project-features ul li::before {
+    content: "•";
+    color: var(--text-muted);
+    margin-right: 8px;
+}
+
+.project-features ul li {
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
+    line-height: 1.5;
+}
+
+.btn-text {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.btn-text:hover {
+    color: var(--text-muted);
+    border-color: var(--text-muted);
 }
